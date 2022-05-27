@@ -1,0 +1,11 @@
+{
+  "name": "coffee-shop",
+  "version": "1.0.0",
+  "description": "The best place to buy your coffee.",
+  "repository": {
+    "url": "https://github.com/faustinozanetto/coffee-shop"
+  },
+  "main": "index.js",
+  "author": "Faustino Zanetto",
+  "license": "MIT"
+}
