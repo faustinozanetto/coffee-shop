@@ -1,8 +1,8 @@
 import '@styles/globals.scss';
 import React from 'react';
-import { AppProps } from 'next/app';
+import type { AppProps } from 'next/app';
 
-type ICoffeeShop = AppProps & {};
+type ICoffeeShop = AppProps;
 
 const CoffeeSgop: React.FC<ICoffeeShop> = (props) => {
   const { Component, pageProps } = props;
