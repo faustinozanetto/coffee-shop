@@ -7,7 +7,7 @@ const HomePage: React.FC<IHomePage> = (props) => {
 
   return (
     <div>
-      <h1>Welcome</h1>
+      <h1 className="text-5xl font-extrabold">Welcome</h1>
     </div>
   );
 };
