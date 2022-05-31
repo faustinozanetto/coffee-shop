@@ -4,7 +4,7 @@ import type { ISeoData } from '../layout.types';
 
 interface ILayoutHead {
   /** SEO Data to fill up on every page. */
-  seo: ISeoData;
+  seo: Partial<ISeoData>;
 }
 
 const LayoutHead: React.FC<ILayoutHead> = (props) => {

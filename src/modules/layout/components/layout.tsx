@@ -1,5 +1,6 @@
 import React from 'react';
 import LayoutHead from './layout-head';
+import LayoutNavbar from './layout-navbar';
 
 interface ILayout {
   children: React.ReactNode;
@@ -12,6 +13,9 @@ const Layout: React.FC<ILayout> = (props) => {
     <main className="flex flex-col min-h-screen">
       {/* Head */}
       <LayoutHead {...headData} />
+
+      {/* Navbar */}
+      <LayoutNavbar />
       {children}
     </main>
   );

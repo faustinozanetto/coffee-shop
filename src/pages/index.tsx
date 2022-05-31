@@ -1,5 +1,6 @@
-import Layout from '@modules/layout/components/layout';
 import React from 'react';
+import Layout from '@modules/layout/components/layout';
+import HomeView from 'views/home/home-view';
 
 interface IHomePage {}
 
@@ -7,8 +8,14 @@ const HomePage: React.FC<IHomePage> = (props) => {
   const {} = props;
 
   return (
-    <Layout>
-      <h1 className="text-5xl font-extrabold">Welcome</h1>
+    <Layout
+      headData={{
+        seo: {
+          title: 'Home | Coffee Shop',
+        },
+      }}
+    >
+      <HomeView />
     </Layout>
   );
 };
