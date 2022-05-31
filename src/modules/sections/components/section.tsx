@@ -49,8 +49,8 @@ const Section: React.FC<ISectionProps> = (props) => {
       <div
         className={classNames(
           centerContent
-            ? 'flex relative z-20 container max-w-6xl mx-auto w-full h-full p-12 items-center justify-center'
-            : 'flex relative z-20 container max-w-6xl mx-auto w-full h-full p-12'
+            ? 'flex relative z-20 container max-w-7xl mx-auto w-full h-full p-12 items-center justify-center'
+            : 'flex relative z-20 container max-w-7xl mx-auto w-full h-full p-12'
         )}
       >
         {children}

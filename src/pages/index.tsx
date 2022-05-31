@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '@modules/layout/components/layout';
-import HomeView from 'views/home/home-view';
+import HomeView from '@modules/views/home/home-view';
 
 interface IHomePage {}
 
