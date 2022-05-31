@@ -10,9 +10,9 @@ interface ILayout {
 const Layout: React.FC<ILayout> = (props) => {
   const { children, headData } = props;
   return (
-    <main className="flex flex-col min-h-screen">
+    <main className="flex flex-col ">
       {/* Head */}
-      <LayoutHead {...headData} />
+      <LayoutHead {...Object.assign(headData.seo)} />
 
       {/* Navbar */}
       <LayoutNavbar />

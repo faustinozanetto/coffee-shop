@@ -1,19 +1,19 @@
 export type ISeoData = {
   /** SEO Title */
-  title: string;
+  title?: string;
   /** SEO Description */
-  description: string;
+  description?: string;
   /** SEO Canonical URL */
-  canonicalUrl: string;
+  canonicalUrl?: string;
   /** SEO URL */
-  url: string;
+  url?: string;
   /** SEO Image URL */
-  imageUrl: string;
+  imageUrl?: string;
   /** SEO Image Alt */
-  imageAlt: string;
+  imageAlt?: string;
   /** SEO Image Dimensions */
-  imageDimensions: {
-    width: number;
-    height: number;
-  }
+  imageDimensions?: {
+    width?: number;
+    height?: number;
+  };
 };

@@ -1,4 +1,5 @@
 import '@styles/globals.scss';
+import '@fontsource/poppins';
 import React from 'react';
 import type { AppProps } from 'next/app';
 

@@ -4,7 +4,7 @@ import type { ISeoData } from '../layout.types';
 
 interface ILayoutHead {
   /** SEO Data to fill up on every page. */
-  seo: Partial<ISeoData>;
+  seo: ISeoData;
 }
 
 const LayoutHead: React.FC<ILayoutHead> = (props) => {
@@ -17,8 +17,8 @@ const LayoutHead: React.FC<ILayoutHead> = (props) => {
       imageUrl: 'https://coffeeshop.com/static/images/logo.png',
       imageAlt: 'Coffee Shop Logo',
       imageDimensions: {
-        width: '200',
-        height: '200',
+        width: 200,
+        height: 200,
       },
     },
   } = props;
