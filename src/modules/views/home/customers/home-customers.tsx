@@ -21,16 +21,12 @@ const HomeCustomers: React.FC<IHomeCustomers> = (props) => {
       <div className="flex flex-col py-10 items-center h-full w-full">
         {/* Top */}
         <h2 className="font-semibold text-5xl text-white text-center mb-6">The customers love us!</h2>
-        <div className="grid grid-cols-1 grid-rows-2 py-4 items-center h-full w-full md:grid-cols-2 md:grid-rows-1">
-          {/* Right Content */}
-          <div className="block">
-            <Carousel interval={0}>
-              {IMAGES.map((image, index) => (
-                <Image key={index} src={image} alt="Image" height={700} width={700} />
-              ))}
-            </Carousel>
-          </div>
-        </div>
+        {/* Right Content */}
+        <Carousel interval={0}>
+          {IMAGES.map((image, index) => (
+            <Image key={index} src={image} alt="Image" height={700} width={700} />
+          ))}
+        </Carousel>
       </div>
     </Section>
   );

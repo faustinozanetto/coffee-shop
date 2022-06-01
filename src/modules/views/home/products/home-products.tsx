@@ -60,7 +60,7 @@ const HomeProducts: React.FC<IHomeProductsProps> = (props) => {
         {/* Bottom */}
         <div className="grid grid-cols-1 py-4 md:grid-cols-2 md:py-6 lg:grid-cols-3 lg:py-10">
           {PRODUCTS.map((product, i) => (
-            <ProductCard key={i} product={product} />
+            <ProductCard key={i} product={product} animationDelay={i * 0.25} />
           ))}
         </div>
       </div>

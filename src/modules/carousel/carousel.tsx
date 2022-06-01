@@ -11,9 +11,8 @@ const transition: AnimationOptions<any> = {
 };
 
 const containerStyle: React.CSSProperties = {
-  position: 'relative',
-  width: '100%',
   height: '100%',
+  width: 'auto',
   overflowX: 'hidden',
   display: 'flex',
 };
@@ -34,7 +33,7 @@ const Carousel: React.FC<ICarouselProps> = (props) => {
   const x = useMotionValue(0);
   const containerRef = React.useRef<HTMLDivElement>(null);
   const childrens = React.Children.toArray(children);
-  const { current, incrementIndex, decrementIndex } = useCarousel('', childrens.length);
+  const { current, incrementIndex, decrementIndex } = useCarousel(childrens.length);
 
   const calculateNewX = () => -current * (containerRef.current?.clientWidth || 0);
 
