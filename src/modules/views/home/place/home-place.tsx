@@ -7,7 +7,7 @@ const HomePlace: React.FC<IHomePlaceProps> = (props) => {
   const {} = props;
 
   return (
-    <Section hasDivider={false} backgroundColor="#DAD8D3">
+    <Section backgroundColor="#DAD8D3">
       <div className="flex flex-col py-10 items-center h-full w-full">
         {/* Top */}
         <h2 className="font-semibold text-5xl text-gray-900 text-center mb-6">¿Where are at?</h2>

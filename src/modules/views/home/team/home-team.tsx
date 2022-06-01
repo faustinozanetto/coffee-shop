@@ -7,7 +7,7 @@ const HomeTeam: React.FC<IHomeTeamProps> = (props) => {
   const {} = props;
 
   return (
-    <Section hasDivider dividerColor="#DAD8D3" backgroundColor="#151412">
+    <Section dividerColor="#DAD8D3" backgroundColor="#151412">
       <div className="flex flex-col py-10 items-center h-full w-full">
         {/* Top */}
         <h2 className="font-semibold text-5xl text-white text-center mb-6">Meet the amazing team</h2>

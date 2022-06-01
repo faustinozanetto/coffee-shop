@@ -48,7 +48,7 @@ const HomeProducts: React.FC<IHomeProductsProps> = (props) => {
   const {} = props;
 
   return (
-    <Section hasDivider dividerColor="#151412" centerContent backgroundColor="#DAD8D3">
+    <Section dividerColor="#151412" centerContent backgroundColor="#DAD8D3">
       <div className="flex flex-col py-10 items-center h-full w-full">
         {/* Top */}
         <div>
@@ -58,7 +58,7 @@ const HomeProducts: React.FC<IHomeProductsProps> = (props) => {
           </p>
         </div>
         {/* Bottom */}
-        <div className="grid grid-cols-1 py-4 md:grid-cols-2 md:py-6 lg:grid-cols-3 lg:py-10">
+        <div className="grid grid-cols-1 gap-2 py-4 md:grid-cols-2 md:py-6 lg:grid-cols-3 lg:py-10">
           {PRODUCTS.map((product, i) => (
             <ProductCard key={i} product={product} animationDelay={i * 0.25} />
           ))}

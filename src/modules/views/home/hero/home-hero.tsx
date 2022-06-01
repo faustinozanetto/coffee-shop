@@ -8,7 +8,6 @@ const HomeHero: React.FC<IHomeHeroProps> = (props) => {
 
   return (
     <Section
-      hasDivider
       dividerColor="#DAD8D3"
       fullHeight
       backgroundIsImage

@@ -1,73 +1,63 @@
-import React, { useEffect } from 'react';
-import type { AnimationOptions, PanInfo } from 'framer-motion';
-import { animate, useMotionValue } from 'framer-motion';
-import useCarousel from '@hooks/carousel/use-carousel.hook';
-import CarouselSlider from './carousel-slider';
+import React, { useContext, useEffect, useReducer } from 'react';
 import CarouselArrow from './carousel-arrow';
-
-const transition: AnimationOptions<any> = {
-  type: 'spring',
-  bounce: 0,
-};
-
-const containerStyle: React.CSSProperties = {
-  height: '100%',
-  width: 'auto',
-  overflowX: 'hidden',
-  display: 'flex',
-};
-
-const Contaier = React.forwardRef<HTMLDivElement, { children: React.ReactNode }>((props, ref) => (
-  <div ref={ref} style={containerStyle}>
-    {props.children}
-  </div>
-));
+import CarouselItem from './carousel-item';
+import CarouselTrack from './carousel-track';
+import { CarouselContext, CarouselProvider, carouselReducer, initialState } from './state/carousel-context';
+import { ACTION_TYPES } from './types/carousel.types';
 
 interface ICarouselProps {
-  children: React.ReactNode;
-  interval?: number;
+  children: React.ReactNode[];
 }
 
 const Carousel: React.FC<ICarouselProps> = (props) => {
-  const { children, interval = 2000 } = props;
-  const x = useMotionValue(0);
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const childrens = React.Children.toArray(children);
-  const { current, incrementIndex, decrementIndex } = useCarousel(childrens.length);
+  const { children } = props;
+  const [state, dispatch] = useReducer(carouselReducer, initialState);
+  // const { state, dispatch } = useContext(CarouselContext);
 
-  const calculateNewX = () => -current * (containerRef.current?.clientWidth || 0);
-
-  const handleEndDrag = (e: Event, dragProps: PanInfo) => {
-    const clientWidth = containerRef.current?.clientWidth || 0;
-
-    const { offset } = dragProps;
-
-    if (offset.x > clientWidth / 4) {
-      decrementIndex();
-    } else if (offset.x < -clientWidth / 4) {
-      incrementIndex();
-    } else {
-      animate(x, calculateNewX(), transition);
+  const handlePrevSlide = () => {
+    if (state.currentIndex !== 1) {
+      dispatch({
+        type: ACTION_TYPES.SetIndex,
+        payload: { index: state.currentIndex - 1 },
+      });
+    } else if (state.currentIndex === 1) {
+      dispatch({
+        type: ACTION_TYPES.SetIndex,
+        payload: { index: children.length },
+      });
     }
   };
 
-  useEffect(() => {
-    const controls = animate(x, calculateNewX(), transition);
-    return controls.stop;
-  }, [current]);
+  const handleNextSlide = async () => {
+    if (state.currentIndex !== children.length) {
+      await dispatch({
+        type: ACTION_TYPES.SetIndex,
+        payload: { index: state.currentIndex + 1 },
+      });
+    } else if (state.currentIndex === children.length) {
+      await dispatch({
+        type: ACTION_TYPES.SetIndex,
+        payload: { index: 1 },
+      });
+    }
+  };
 
   return (
-    <Contaier ref={containerRef}>
-      {childrens.map((child, i) => (
-        <CarouselSlider onDragEnd={handleEndDrag} x={x} i={i} key={i}>
-          {child}
-        </CarouselSlider>
-      ))}
-      <CarouselArrow left onClick={() => decrementIndex()}>
-        &larr;
-      </CarouselArrow>
-      <CarouselArrow onClick={() => incrementIndex()}>&rarr;</CarouselArrow>
-    </Contaier>
+    <CarouselProvider>
+      <div className="block w-full">
+        <CarouselArrow leftButton onClick={async () => handlePrevSlide()}>
+          &larr;
+        </CarouselArrow>
+        <CarouselArrow onClick={async () => handleNextSlide()}>&rarr;</CarouselArrow>
+        <CarouselTrack>
+          {children.map((child, i) => (
+            <CarouselItem style={{ opacity: state.currentIndex === i + 1 ? 1 : 0 }}>
+              {state.currentIndex === i + 1 && child}
+            </CarouselItem>
+          ))}
+        </CarouselTrack>
+      </div>
+    </CarouselProvider>
   );
 };
 

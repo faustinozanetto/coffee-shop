@@ -23,7 +23,7 @@ const Section: React.FC<ISectionProps> = (props) => {
   const {
     backgroundColor = 'white',
     dividerColor = 'black',
-    hasDivider = true,
+    hasDivider = false,
     backgroundIsImage = false,
     backgroundImage = '',
     centerContent = true,

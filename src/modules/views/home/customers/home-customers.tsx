@@ -3,7 +3,7 @@ import Section from '@modules/sections/components/section';
 import useCarousel from '@hooks/carousel/use-carousel.hook';
 import Image from 'next/image';
 import Carousel from '@modules/carousel/carousel';
-
+import { motion } from 'framer-motion';
 interface IHomeCustomers {}
 
 const IMAGES = [
@@ -17,14 +17,14 @@ const HomeCustomers: React.FC<IHomeCustomers> = (props) => {
   const {} = props;
 
   return (
-    <Section hasDivider dividerColor="#DAD8D3" backgroundColor="#151412">
-      <div className="flex flex-col py-10 items-center h-full w-full">
+    <Section dividerColor="#DAD8D3" backgroundColor="#151412">
+      <div className="flex flex-col justify-center items-center h-full w-full">
         {/* Top */}
-        <h2 className="font-semibold text-5xl text-white text-center mb-6">The customers love us!</h2>
-        {/* Right Content */}
-        <Carousel interval={0}>
+        <h2 className="font-semibold text-5xl text-white text-center mb-14">The customers love us!</h2>
+        {/* Bottom */}
+        <Carousel>
           {IMAGES.map((image, index) => (
-            <Image key={index} src={image} alt="Image" height={700} width={700} />
+            <Image src={image} width={800} height={500} alt="PHoto" />
           ))}
         </Carousel>
       </div>

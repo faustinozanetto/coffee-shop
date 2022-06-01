@@ -1,38 +1,27 @@
 import React from 'react';
 
-const baseArrowStyle: React.CSSProperties = {
-  position: 'absolute',
-  width: '50px',
-  height: '50px',
-  backgroundColor: 'rgba(0,0,0,0.5)',
-  top: '50%',
-  transform: 'translateY(-50%)',
-  borderRadius: '50%',
-  color: '#fff',
-  fontSize: '20px',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  cursor: 'pointer',
-};
-
 interface ICarouselArrowProps {
   onClick: () => void;
-  left?: boolean;
+  leftButton?: boolean;
   children: React.ReactNode;
 }
 
-const CarouselArrow = ({ left = false, children, onClick }: ICarouselArrowProps) => (
-  <div
-    onClick={onClick}
-    style={{
-      ...baseArrowStyle,
-      left: left ? '20px' : 'initial',
-      right: !left ? '10px' : 'initial',
-    }}
-  >
-    {children}
-  </div>
-);
+const CarouselArrow: React.FC<ICarouselArrowProps> = (props) => {
+  const { onClick, leftButton, children } = props;
+
+  return (
+    <button
+      className="absolute px-4 py-3 top-2/4 text-base rounded-none font-medium text-center text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 "
+      type="button"
+      onClick={onClick}
+      style={{
+        left: leftButton ? '10rem' : 'auto',
+        right: leftButton ? 'auto' : '10rem',
+      }}
+    >
+      {children}
+    </button>
+  );
+};
 
 export default CarouselArrow;
