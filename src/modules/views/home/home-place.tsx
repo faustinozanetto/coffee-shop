@@ -31,7 +31,7 @@ const HomePlace: React.FC<IHomePlaceProps> = (props) => {
 
         {/* Right Content */}
         <div className="flex h-full">
-          <div className="flex flex-col  justify-center">
+          <div className="flex flex-col justify-center">
             <Image
               src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80"
               alt="Shop"
