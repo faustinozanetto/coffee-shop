@@ -7,8 +7,8 @@ const HomeTeam: React.FC<IHomeTeamProps> = (props) => {
   const {} = props;
 
   return (
-    <Section hasDivider={false} backgroundColor="#151412">
-      <div className="grid grid-cols-2 py-10 h-full w-full">
+    <Section hasDivider dividerColor="#DAD8D3" backgroundColor="#151412">
+      <div className="grid grid-cols-1 grid-rows-2 py-4 items-center h-full w-full md:grid-cols-2 md:grid-rows-1">
         {/* Left Content */}
         <div className="flex pr-8 mr-auto">
           <div className="flex flex-col justify-center">

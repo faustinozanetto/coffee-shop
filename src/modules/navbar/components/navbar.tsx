@@ -1,9 +1,9 @@
 import ShopLogo from '@modules/branding/components/shop-logo';
 import React from 'react';
 
-interface ILayoutNavbarProps {}
+interface INavbarProps {}
 
-const LayoutNavbar: React.FC<ILayoutNavbarProps> = (props) => {
+const Navbar: React.FC<INavbarProps> = (props) => {
   const {} = props;
 
   return (
@@ -25,4 +25,4 @@ const LayoutNavbar: React.FC<ILayoutNavbarProps> = (props) => {
   );
 };
 
-export default LayoutNavbar;
+export default Navbar;

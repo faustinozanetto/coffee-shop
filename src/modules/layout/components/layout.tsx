@@ -1,6 +1,7 @@
+import Navbar from '@modules/navbar/components/navbar';
 import React from 'react';
+import Footer from '../../footer/components/footer';
 import LayoutHead from './layout-head';
-import LayoutNavbar from './layout-navbar';
 
 interface ILayout {
   children: React.ReactNode;
@@ -15,8 +16,11 @@ const Layout: React.FC<ILayout> = (props) => {
       <LayoutHead {...Object.assign(headData.seo)} />
 
       {/* Navbar */}
-      <LayoutNavbar />
+      <Navbar />
       {children}
+
+      {/* Footer */}
+      <Footer />
     </main>
   );
 };

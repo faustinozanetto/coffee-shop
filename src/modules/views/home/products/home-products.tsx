@@ -49,7 +49,7 @@ const HomeProducts: React.FC<IHomeProductsProps> = (props) => {
 
   return (
     <Section hasDivider dividerColor="#151412" centerContent backgroundColor="#DAD8D3">
-      <div className="flex flex-col py-10 h-full w-full">
+      <div className="flex flex-col py-10 items-center h-full w-full">
         {/* Top */}
         <div>
           <h2 className="font-semibold text-5xl text-gray-900 text-center mb-2">Our Products</h2>
@@ -58,7 +58,7 @@ const HomeProducts: React.FC<IHomeProductsProps> = (props) => {
           </p>
         </div>
         {/* Bottom */}
-        <div className="grid grid-cols-3 py-10">
+        <div className="grid grid-cols-1 py-4 md:grid-cols-2 md:py-6 lg:grid-cols-3 lg:py-10">
           {PRODUCTS.map((product, i) => (
             <ProductCard key={i} product={product} />
           ))}
