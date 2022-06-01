@@ -32,11 +32,7 @@ const Section: React.FC<ISectionProps> = (props) => {
   } = props;
 
   return (
-    <section
-      className={classNames(
-        fullHeight ? 'flex relative w-full min-w-full h-screen ' : 'flex relative w-full min-w-full '
-      )}
-    >
+    <section className={classNames(fullHeight ? 'flex relative w-full h-screen ' : 'flex relative w-full')}>
       {/* Background */}
       <div
         className="absolute top-0 right-0 bottom-0 left-0 z-10 overflow-hidden bg-center bg-cover"
@@ -49,8 +45,8 @@ const Section: React.FC<ISectionProps> = (props) => {
       <div
         className={classNames(
           centerContent
-            ? 'flex relative z-20 container max-w-7xl mx-auto w-full h-full p-12 items-center justify-center'
-            : 'flex relative z-20 container max-w-7xl mx-auto w-full h-full p-12'
+            ? 'flex z-20 container mx-auto max-w-7xl w-full h-full p-12 items-center justify-center'
+            : 'flex z-20 container mx-auto max-w-7xl w-full h-full p-12'
         )}
       >
         {children}

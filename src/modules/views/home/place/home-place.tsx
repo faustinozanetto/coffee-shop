@@ -8,8 +8,8 @@ const HomePlace: React.FC<IHomePlaceProps> = (props) => {
   const {} = props;
 
   return (
-    <Section hasDivider={false} backgroundColor="#151412">
-      <div className="flex flex-row items-start h-full w-full">
+    <Section hasDivider dividerColor="#DAD8D3" backgroundColor="#151412">
+      <div className="flex flex-row py-10 h-full w-full">
         {/* Left Content */}
         <div className="flex h-full mr-auto">
           <div className="flex flex-col justify-center">

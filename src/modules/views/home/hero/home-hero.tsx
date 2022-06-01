@@ -8,12 +8,13 @@ const HomeHero: React.FC<IHomeHeroProps> = (props) => {
 
   return (
     <Section
-      hasDivider={false}
+      hasDivider
+      dividerColor="#151412"
       fullHeight
       backgroundIsImage
       backgroundImage="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     >
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-full">
         {/* Main title */}
         <div className="py-8 text-center">
           <h1 className="font-black text-9xl text-white">Coffe Shop</h1>

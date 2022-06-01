@@ -1,7 +1,8 @@
 import React from 'react';
-import HomeHero from './home-hero';
-import HomePlace from './home-place';
+import HomeHero from './hero/home-hero';
+import HomePlace from './place/home-place';
 import HomeProducts from './products/home-products';
+import HomeTeam from './team/home-team';
 
 interface IHomeViewProps {}
 
@@ -13,6 +14,7 @@ const HomeView: React.FC<IHomeViewProps> = (props) => {
       <HomeHero />
       <HomePlace />
       <HomeProducts />
+      <HomeTeam />
     </div>
   );
 };

@@ -5,7 +5,7 @@ import type { ProductData } from './home-products.types';
 
 interface IHomeProductsProps {}
 
-const PRODUCTS: Partial<ProductData>[] = [
+const PRODUCTS: ProductData[] = [
   {
     thumbnail:
       'https://images.unsplash.com/photo-1485808191679-5f86510681a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
@@ -48,8 +48,8 @@ const HomeProducts: React.FC<IHomeProductsProps> = (props) => {
   const {} = props;
 
   return (
-    <Section hasDivider={false} centerContent backgroundColor="#DAD8D3">
-      <div className="flex flex-col">
+    <Section hasDivider dividerColor="#151412" centerContent backgroundColor="#DAD8D3">
+      <div className="flex flex-col py-10 h-full w-full">
         {/* Top */}
         <div>
           <h2 className="font-semibold text-5xl text-gray-900 text-center mb-2">Our Products</h2>
