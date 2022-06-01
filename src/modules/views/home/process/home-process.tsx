@@ -11,7 +11,7 @@ const HomeProcess: React.FC<IHomeProcessProps> = (props) => {
   const {} = props;
 
   return (
-    <Section hasDivider={false} centerContent backgroundColor="#DAD8D3">
+    <Section hasDivider dividerColor="#151412" centerContent backgroundColor="#DAD8D3">
       <div className="flex flex-col py-10 h-full w-full">
         {/* Title */}
         <div className="mb-6">

@@ -1,4 +1,5 @@
 import React from 'react';
+import HomeCustomers from './customers/home-customers';
 import HomeHero from './hero/home-hero';
 import HomePlace from './place/home-place';
 import HomeProcess from './process/home-process';
@@ -16,6 +17,7 @@ const HomeView: React.FC<IHomeViewProps> = (props) => {
       <HomeProducts />
       <HomeTeam />
       <HomeProcess />
+      <HomeCustomers />
       <HomePlace />
     </div>
   );
