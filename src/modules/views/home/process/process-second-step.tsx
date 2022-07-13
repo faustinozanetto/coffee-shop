@@ -1,48 +1,41 @@
-import { motion } from 'framer-motion';
+import { Flex, Box, Text } from '@chakra-ui/react';
 import React from 'react';
 
 interface IProcessSecondStep {}
 
 const ProcessSecondStep: React.FC<IProcessSecondStep> = ({}) => {
-
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{
-        type: 'spring',
-        bounce: 0.4,
-        duration: 0.8,
-      }}
-      variants={{
-        visible: { x: 0, opacity: 1 },
-        hidden: { x: -100, opacity: 0 },
-      }}
+    <Box
+      width="400px"
+      backgroundColor="whiteAlpha.900"
+      shadow="rgba(237, 137, 54, 0.25) 0px 8px 24px"
+      margin={4}
+      overflow="hidden"
     >
-      <div className="grid grid-cols-1 grid-rows-2 py-4 h-max w-full md:grid-cols-2 md:grid-rows-1 md:py-8 md:h-80">
-        {/* Left Content */}
-        <div className="flex mr-6 w-full">
-          <div
-            className="bg-cover bg-center w-full"
-            style={{
-              backgroundImage:
-                'url(https://images.unsplash.com/photo-1537130508299-46ab547b4be3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80)',
-            }}
-          />
-        </div>
-        {/* Right Content */}
-        <div className="ml-6">
-          <div className="py-4">
-            <h2 className="font-semibold text-5xl text-gray-900 mb-2">Step 2</h2>
-            <span className="font-bold text-xl text-gray-900 text-left">Grind the beans</span>
-            <p className="font-normal text-xl text-gray-900 text-left">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quia est vero eius consequuntur suscipit!
-            </p>
-          </div>
-        </div>
-      </div>
-    </motion.div>
+      {/* Image */}
+      <Flex
+        flexDir="column"
+        backgroundImage="https://images.unsplash.com/photo-1537130508299-46ab547b4be3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+        backgroundSize="cover"
+        backgroundPosition="center"
+        height="250px"
+        width="100%"
+        overflow="hidden"
+      >
+        <Box padding={2} marginTop="auto" marginRight="auto">
+          <Text as="p" fontSize="3xl" fontWeight={900} lineHeight="1" padding={2} backgroundColor="black" color="white">
+            STEP 2
+          </Text>
+        </Box>
+      </Flex>
+
+      {/* Text */}
+      <Box padding={6}>
+        <Text as="p" fontSize="lg" fontWeight={400} color="black">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae adipisci modi similique, soluta vero tempora
+        </Text>
+      </Box>
+    </Box>
   );
 };
 export default ProcessSecondStep;

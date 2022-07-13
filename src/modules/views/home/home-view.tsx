@@ -1,4 +1,5 @@
 import React from 'react';
+import { Box } from '@chakra-ui/react';
 import HomeAboutUs from './about-us/home-about-us';
 import HomeCustomers from './customers/home-customers';
 import HomeHero from './hero/home-hero';
@@ -13,14 +14,15 @@ const HomeView: React.FC<IHomeViewProps> = (props) => {
   const {} = props;
 
   return (
-    <div className="flex flex-col">
+    <Box>
       <HomeHero />
       <HomeAboutUs />
       <HomeProducts />
       <HomePlace />
       <HomeCustomers />
       <HomeTeam />
-    </div>
+      <HomeProcess />
+    </Box>
   );
 };
 
