@@ -34,7 +34,7 @@ const HomeAboutUs: React.FC<IHomeAboutUsProps> = (props) => {
             Ea fugiat eveniet temporibus cumque?
           </Text>
 
-          <Box paddingTop={10} width="full">
+          <Box paddingTop={4} width="full">
             <Button variant="ghost" size="lg">
               Learn More
             </Button>

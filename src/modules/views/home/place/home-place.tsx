@@ -1,5 +1,6 @@
 import React from 'react';
-import Section from '@modules/sections/components/section';
+import Section from '@modules/section/section';
+import { Text, Box, Flex, VStack, Image, Button, Grid, GridItem } from '@chakra-ui/react';
 
 interface IHomePlaceProps {}
 
@@ -7,43 +8,71 @@ const HomePlace: React.FC<IHomePlaceProps> = (props) => {
   const {} = props;
 
   return (
-    <Section backgroundColor="#DAD8D3">
-      <div className="flex flex-col py-10 items-center h-full w-full">
-        {/* Top */}
-        <h2 className="font-semibold text-5xl text-gray-900 text-center mb-6">¿Where are at?</h2>
-        {/* Bottom */}
-        <div className="grid grid-cols-1 grid-rows-2 py-4 items-center h-full w-full md:grid-cols-2 md:grid-rows-1">
-          {/* Left Content */}
-          <div className="flex pr-8 mr-auto">
-            <div className="flex flex-col justify-center">
-              <div className="py-4">
-                <h2 className="font-semibold text-5xl text-gray-900 mb-2">Addres</h2>
-                <h3 className="font-normal text-xl text-gray-900 text-left">
-                  681 Punggol Drive, Oasis Terraces #01 - 06 S820681
-                </h3>
-              </div>
-              <div className="py-4">
-                <h2 className="font-semibold text-5xl text-gray-900 mb-2">Opening Hours</h2>
-                <span className="font-normal text-xl text-gray-900 text-left">Mondays - Friday: 10am - 9pm</span>
-                <span className="font-normal text-xl text-gray-900 text-left">
-                  Saturdays, Sundays & Public Holidays: 9am- 9pm
-                </span>
-              </div>
-            </div>
-          </div>
+    <Section backgroundColor="white">
+      <Grid gridTemplateColumns="repeat(3, 1fr)" gridTemplateRows="250px 350px" gap={6}>
+        {/* Left */}
+        <GridItem rowSpan={2}>
+          <VStack spacing={4} alignItems="flex-start">
+            <Text as="span" fontSize="md" color="orange.500" fontWeight={600} letterSpacing="widest">
+              THE PLACE
+            </Text>
+            {/* Texts */}
+            <Text as="h1" fontSize="3em" fontWeight={700} color="black" lineHeight={1}>
+              Comforta's Corner
+            </Text>
+            <Text as="p" fontSize="1.25em" fontWeight={400} color="black">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae adipisci modi similique, soluta vero
+              tempora cupiditate necessitatibus possimus exercitationem voluptatem magni delectus ducimus magnam, illo
+              nostrum voluptas perspiciatis eligendi cumque.
+            </Text>
 
-          {/* Right Content */}
-          <div className="flex h-full w-full">
-            <div
-              className="bg-cover bg-center h-full w-full"
-              style={{
-                backgroundImage:
-                  'url(https://images.unsplash.com/photo-1453614512568-c4024d13c247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80)',
-              }}
+            <Box paddingTop={4} width="full">
+              <Button variant="ghost" size="lg">
+                See More
+              </Button>
+            </Box>
+          </VStack>
+        </GridItem>
+
+        {/* Midle Top */}
+        <GridItem>
+          <Box height="full" width="full">
+            <Image
+              src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmVlJTIwc2hvcHxlbnwwfHwwfHw%3D&w=1000&q=80"
+              objectFit="cover"
+              objectPosition="center"
+              width="100%"
+              height="100%"
             />
-          </div>
-        </div>
-      </div>
+          </Box>
+        </GridItem>
+
+        {/* Right Top */}
+        <GridItem>
+          <Box height="full" width="full">
+            <Image
+              src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/f5843852864027.591f18d2ba0f8.jpg"
+              objectFit="cover"
+              objectPosition="center"
+              width="100%"
+              height="100%"
+            />
+          </Box>
+        </GridItem>
+
+        {/* Midle Right Bottom */}
+        <GridItem rowSpan={1} colSpan={2}>
+          <Box width="full" height="full">
+            <Image
+              src="https://i.pinimg.com/originals/27/2c/b4/272cb407fc2a28aa22a19b65b40bab24.jpg"
+              objectFit="cover"
+              objectPosition="center"
+              width="100%"
+              height="100%"
+            />
+          </Box>
+        </GridItem>
+      </Grid>
     </Section>
   );
 };
