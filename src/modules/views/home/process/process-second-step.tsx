@@ -4,6 +4,7 @@ import React from 'react';
 interface IProcessSecondStep {}
 
 const ProcessSecondStep: React.FC<IProcessSecondStep> = ({}) => {
+
   return (
     <motion.div
       initial="hidden"

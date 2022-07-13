@@ -1,4 +1,4 @@
-export type CarouselContextState = {
+export type CarouselState = {
   currentIndex: number;
   isTransitioning: boolean;
 };
@@ -8,7 +8,7 @@ export enum ACTION_TYPES {
   SetTransitioning = 'SET_TRANSITIONING',
 }
 
-type ActionMap<M extends { [index: string]: any }> = {
+type ActionMap<M extends { [index: string]: unknown }> = {
   [Key in keyof M]: M[Key] extends undefined
     ? {
         type: Key;

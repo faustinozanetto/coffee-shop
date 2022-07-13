@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useReducer } from 'react';
+import React, { useReducer } from 'react';
 import CarouselArrow from './carousel-arrow';
 import CarouselItem from './carousel-item';
 import CarouselTrack from './carousel-track';
-import { CarouselContext, CarouselProvider, carouselReducer, initialState } from './state/carousel-context';
+import { carouselReducer, initialState } from './state/carousel-reducer';
 import { ACTION_TYPES } from './types/carousel.types';
 
 interface ICarouselProps {
@@ -12,7 +12,6 @@ interface ICarouselProps {
 const Carousel: React.FC<ICarouselProps> = (props) => {
   const { children } = props;
   const [state, dispatch] = useReducer(carouselReducer, initialState);
-  // const { state, dispatch } = useContext(CarouselContext);
 
   const handlePrevSlide = () => {
     if (state.currentIndex !== 1) {
@@ -43,21 +42,19 @@ const Carousel: React.FC<ICarouselProps> = (props) => {
   };
 
   return (
-    <CarouselProvider>
-      <div className="block w-full">
-        <CarouselArrow leftButton onClick={async () => handlePrevSlide()}>
-          &larr;
-        </CarouselArrow>
-        <CarouselArrow onClick={async () => handleNextSlide()}>&rarr;</CarouselArrow>
-        <CarouselTrack>
-          {children.map((child, i) => (
-            <CarouselItem style={{ opacity: state.currentIndex === i + 1 ? 1 : 0 }}>
-              {state.currentIndex === i + 1 && child}
-            </CarouselItem>
-          ))}
-        </CarouselTrack>
-      </div>
-    </CarouselProvider>
+    <div>
+      <CarouselArrow leftButton onClick={async () => handlePrevSlide()}>
+        &larr;
+      </CarouselArrow>
+      <CarouselArrow onClick={async () => handleNextSlide()}>&rarr;</CarouselArrow>
+      <CarouselTrack>
+        {children.map((child, i) => (
+          <CarouselItem style={{ opacity: state.currentIndex === i + 1 ? 1 : 0 }}>
+            {state.currentIndex === i + 1 && child}
+          </CarouselItem>
+        ))}
+      </CarouselTrack>
+    </div>
   );
 };
 

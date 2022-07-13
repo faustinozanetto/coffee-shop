@@ -1,9 +1,8 @@
 import React from 'react';
 import Section from '@modules/sections/components/section';
-import useCarousel from '@hooks/carousel/use-carousel.hook';
 import Image from 'next/image';
 import Carousel from '@modules/carousel/carousel';
-import { motion } from 'framer-motion';
+
 interface IHomeCustomers {}
 
 const IMAGES = [
@@ -24,7 +23,7 @@ const HomeCustomers: React.FC<IHomeCustomers> = (props) => {
         {/* Bottom */}
         <Carousel>
           {IMAGES.map((image, index) => (
-            <Image src={image} width={800} height={500} alt="PHoto" />
+            <Image key={index} src={image} width={800} height={500} alt="PHoto" />
           ))}
         </Carousel>
       </div>
