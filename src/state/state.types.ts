@@ -9,3 +9,8 @@ export type CarouselState = {
   /** Carousel data */
   current: number;
 };
+
+export type ProductSelectorState = {
+  /* Selected product id */
+  id: number;
+};

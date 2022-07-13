@@ -1,69 +1,97 @@
-import React from 'react';
-import Section from '@modules/sections/components/section';
-import ProductCard from './product-card';
-import type { ProductData } from './home-products.types';
+import React, { useMemo, useState } from 'react';
+import Section from '@modules/section/section';
+import { Text, Box, Flex, VStack, Image, Button, HStack } from '@chakra-ui/react';
+import ProductDetails, { IProductDetailsProps } from '@modules/product/product-detials';
+import { ProductDetailsType } from '@modules/product/product-details.types';
+import ProductSelector from '@modules/product/product-selector';
 
 interface IHomeProductsProps {}
 
-const PRODUCTS: ProductData[] = [
+const PRODUCTS: ProductDetailsType[] = [
   {
+    id: 1,
     thumbnail:
       'https://images.unsplash.com/photo-1485808191679-5f86510681a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
     name: 'Macchiato',
-    nameColor: 'black',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, ullam. Optio illo voluptate perspiciatis rer mollitia autem, odit assumenda ipsam minima aliquid fuga, corporis adipisci.',
   },
+
   {
+    id: 2,
     thumbnail:
       'https://images.unsplash.com/photo-1610632380989-680fe40816c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
     name: 'Cappuccino',
-    nameColor: 'white',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, ullam. Optio illo voluptate perspiciatis rer mollitia autem, odit assumenda ipsam minima aliquid fuga, corporis adipisci.',
   },
+
   {
+    id: 3,
     thumbnail:
       'https://images.unsplash.com/photo-1498709112912-9be3173d30be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80',
     name: 'Espresso',
-    nameColor: 'white',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, ullam. Optio illo voluptate perspiciatis rer mollitia autem, odit assumenda ipsam minima aliquid fuga, corporis adipisci.',
   },
+
   {
+    id: 4,
     thumbnail:
       'https://images.unsplash.com/photo-1562447457-579fc34967fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
     name: 'Cold',
-    nameColor: 'black',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, ullam. Optio illo voluptate perspiciatis rer mollitia autem, odit assumenda ipsam minima aliquid fuga, corporis adipisci.',
   },
+
   {
+    id: 5,
     thumbnail:
       'https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
     name: 'Americano',
-    nameColor: 'white',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, ullam. Optio illo voluptate perspiciatis rer mollitia autem, odit assumenda ipsam minima aliquid fuga, corporis adipisci.',
   },
+
   {
+    id: 6,
     thumbnail:
       'https://images.unsplash.com/photo-1577590835286-1cdd24c08fd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
     name: 'Latte',
-    nameColor: 'black',
+    description: '',
   },
 ];
 
 const HomeProducts: React.FC<IHomeProductsProps> = (props) => {
   const {} = props;
+  const [selectedProductID, setSelectedProductID] = useState<number>(1);
+
+  const getSelectedProduct = useMemo(() => {
+    return PRODUCTS.find((prod) => prod.id === selectedProductID);
+  }, [selectedProductID]);
 
   return (
-    <Section dividerColor="#151412" centerContent backgroundColor="#DAD8D3">
-      <div className="flex flex-col py-10 items-center h-full w-full">
+    <Section backgroundColor="black">
+      <Flex flexDir="column">
         {/* Top */}
-        <div>
-          <h2 className="font-semibold text-5xl text-gray-900 text-center mb-2">Our Products</h2>
-          <p className="font-normal text-md text-gray-900 text-center">
-            We offer over 20 different flavors of coffee, from our own beans to the best in the world.
-          </p>
-        </div>
+        <VStack width="100%" spacing={4}>
+          {/* Texts */}
+          <Text as="h1" fontSize="3em" fontWeight={700} color="white" lineHeight={1}>
+            Our Products
+          </Text>
+          <Text as="h2" fontSize="1.75em" fontWeight={400} color="white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </Text>
+        </VStack>
+
         {/* Bottom */}
-        <div className="grid grid-cols-1 gap-2 py-4 md:grid-cols-2 md:py-6 lg:grid-cols-3 lg:py-10">
-          {PRODUCTS.map((product, i) => (
-            <ProductCard key={i} product={product} animationDelay={i * 0.25} />
-          ))}
-        </div>
-      </div>
+        <HStack spacing={4}>
+          {/* Product Selector */}
+          <ProductSelector />
+          {/* Product */}
+          <ProductDetails product={getSelectedProduct} />
+        </HStack>
+      </Flex>
     </Section>
   );
 };

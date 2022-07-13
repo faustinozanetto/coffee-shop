@@ -1,4 +1,5 @@
 import React from 'react';
+import HomeAboutUs from './about-us/home-about-us';
 import HomeCustomers from './customers/home-customers';
 import HomeHero from './hero/home-hero';
 import HomePlace from './place/home-place';
@@ -14,6 +15,8 @@ const HomeView: React.FC<IHomeViewProps> = (props) => {
   return (
     <div className="flex flex-col">
       <HomeHero />
+      <HomeAboutUs />
+      <HomeProducts />
       {/* <HomeProducts />
       <HomeTeam />
       <HomeProcess />
