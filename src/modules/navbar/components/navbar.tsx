@@ -9,16 +9,18 @@ const Navbar: React.FC<INavbarProps> = (props) => {
   const {} = props;
 
   return (
-    <Box as="header" zIndex={40}>
-      <Container maxWidth="6xl" padding={4}>
+    <Box as="header" width="full" position="absolute" top={0} zIndex={10}>
+      <Container maxWidth="8xl" alignItems="center" justifyContent="center" padding={6}>
         {/* Content */}
-        <Flex align="center" justify="space-between">
+        <Flex alignItems="center">
           {/* Logo */}
           <ShopLogo />
 
           {/* Links */}
-          <Flex align="center" justify="flex-end">
-            <NavbarLink href="/" label="about" />
+          <Flex marginLeft="auto" alignItems="center" justifyContent="center" justify="flex-end">
+            <NavbarLink href="/" label="About" />
+            <NavbarLink href="/" label="Gallery" />
+            <NavbarLink href="/" label="Contact" />
           </Flex>
         </Flex>
       </Container>

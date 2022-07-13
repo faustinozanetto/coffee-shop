@@ -19,6 +19,7 @@ const ButtonTheme: ComponentStyleConfig = {
       color: 'orange.400',
       _hover: {
         bg: 'orange.600',
+        color: 'white',
       },
     },
   },

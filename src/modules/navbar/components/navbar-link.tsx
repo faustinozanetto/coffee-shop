@@ -12,7 +12,16 @@ const NavbarLink: React.FC<INavbarLinkProps> = (props) => {
 
   return (
     <NextLink href={href} passHref>
-      <Text as="span" cursor="pointer">
+      <Text
+        as="span"
+        cursor="pointer"
+        padding={4}
+        fontSize={18}
+        fontWeight={500}
+        color="white"
+        transition="all 0.2s"
+        _hover={{ color: 'orange.500' }}
+      >
         {label}
       </Text>
     </NextLink>

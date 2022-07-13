@@ -29,8 +29,8 @@ const Section: React.FC<SectionProps> = (props) => {
         height="100%"
         width="100%"
       >
-        <Box paddingX={{ base: 4, md: 8 }} paddingY={[20, 30, 40, 60, 150]}>
-          <Container maxWidth="container.xl">{children}</Container>
+        <Box paddingX={{ base: 4, md: 8 }} paddingY="10rem">
+          <Container maxWidth="8xl">{children}</Container>
         </Box>
       </Box>
     </VStack>
