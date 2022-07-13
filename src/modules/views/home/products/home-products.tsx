@@ -2,8 +2,10 @@ import React, { useMemo, useState } from 'react';
 import Section from '@modules/section/section';
 import { Text, Box, Flex, VStack, Image, Button, HStack } from '@chakra-ui/react';
 import ProductDetails, { IProductDetailsProps } from '@modules/product/product-detials';
-import { ProductDetailsType } from '@modules/product/product-details.types';
-import ProductSelector from '@modules/product/product-selector';
+import type { ProductDetailsType } from '@modules/product/product-details.types';
+import ProductSelector from '@modules/product/selector/product-selector';
+import { useSelector } from 'react-redux';
+import { selectProductSelectorState } from '@state/slices/product-selector.slice';
 
 interface IHomeProductsProps {}
 
@@ -64,7 +66,7 @@ const PRODUCTS: ProductDetailsType[] = [
 
 const HomeProducts: React.FC<IHomeProductsProps> = (props) => {
   const {} = props;
-  const [selectedProductID, setSelectedProductID] = useState<number>(1);
+  const selectedProductID = useSelector(selectProductSelectorState);
 
   const getSelectedProduct = useMemo(() => {
     return PRODUCTS.find((prod) => prod.id === selectedProductID);
@@ -87,7 +89,7 @@ const HomeProducts: React.FC<IHomeProductsProps> = (props) => {
         {/* Bottom */}
         <HStack spacing={4}>
           {/* Product Selector */}
-          <ProductSelector />
+          <ProductSelector products={PRODUCTS.map((product) => [product.id, product.name])} />
           {/* Product */}
           <ProductDetails product={getSelectedProduct} />
         </HStack>
