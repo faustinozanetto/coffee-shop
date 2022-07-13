@@ -3,6 +3,7 @@ import { VStack } from '@chakra-ui/react';
 import { setSelectedProduct } from '@state/slices/product-selector.slice';
 import { useDispatch } from 'react-redux';
 import ProductSelectorItem from './product-selector-item';
+import { AnimatePresence, motion } from 'framer-motion';
 
 interface IProductSelectorProps {
   products: [number, string][];

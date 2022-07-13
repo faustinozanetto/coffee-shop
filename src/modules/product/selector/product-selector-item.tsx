@@ -1,4 +1,5 @@
 import { Text } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import React from 'react';
 
 interface IProductSelectorItemProps {
@@ -11,17 +12,29 @@ const ProductSelectorItem: React.FC<IProductSelectorItemProps> = (props) => {
   const { productId, name, onSelected } = props;
 
   return (
-    <Text
-      fontSize="xl"
-      fontWeight={600}
-      color="white"
-      cursor="pointer"
-      textAlign="left"
-      _hover={{ color: 'orange.500' }}
-      onClick={() => onSelected(productId)}
+    <motion.text
+      whileHover="animate"
+      transition={{
+        type: 'spring',
+        bounce: 0.25,
+        duration: 0.5,
+      }}
+      variants={{
+        animate: { translateY: 5 },
+      }}
     >
-      {name}
-    </Text>
+      <Text
+        fontSize="xl"
+        fontWeight={600}
+        color="white"
+        cursor="pointer"
+        textAlign="left"
+        _hover={{ color: 'orange.500' }}
+        onClick={() => onSelected(productId)}
+      >
+        {name}
+      </Text>
+    </motion.text>
   );
 };
 

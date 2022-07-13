@@ -6,6 +6,7 @@ import type { ProductDetailsType } from '@modules/product/product-details.types'
 import ProductSelector from '@modules/product/selector/product-selector';
 import { useSelector } from 'react-redux';
 import { selectProductSelectorState } from '@state/slices/product-selector.slice';
+import { AnimatePresence } from 'framer-motion';
 
 interface IHomeProductsProps {}
 
@@ -97,7 +98,9 @@ const HomeProducts: React.FC<IHomeProductsProps> = (props) => {
           {/* Product Selector */}
           <ProductSelector products={getShopProducts} />
           {/* Product */}
-          <ProductDetails product={getSelectedProduct} />
+          <AnimatePresence>
+            <ProductDetails product={getSelectedProduct} />
+          </AnimatePresence>
         </HStack>
       </Flex>
     </Section>

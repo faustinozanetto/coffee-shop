@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Text, Image, Stack } from '@chakra-ui/react';
+import { Text, Image, Grid, GridItem } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import type { ProductDetailsType } from './product-details.types';
 
@@ -13,8 +13,9 @@ const ProductDetails: React.FC<IProductDetailsProps> = (props) => {
   return (
     <motion.div
       initial="hidden"
+      exit="hidden"
+      animate="visible"
       whileInView="visible"
-      viewport={{ once: true }}
       transition={{
         type: 'spring',
         bounce: 0.25,
@@ -25,15 +26,12 @@ const ProductDetails: React.FC<IProductDetailsProps> = (props) => {
         hidden: { opacity: 0, translateY: 200 },
       }}
     >
-      <Stack direction="row" padding={8} spacing={6}>
+      <Grid gap={4} margin={4} padding={4} gridTemplateColumns="1fr 1fr" gridTemplateRows="1fr">
         {/* Left */}
-        <Flex flexDir="column">
-          {/* Image */}
-          {product && <Image src={product.thumbnail} alt={product.name} />}
-        </Flex>
+        <GridItem>{product && <Image src={product.thumbnail} alt={product.name} />}</GridItem>
 
         {/* Right */}
-        <Flex flexDir="column" width="full" marginLeft="auto">
+        <GridItem>
           {/* Name */}
           <Text fontSize="4xl" fontWeight={700} color="orange.500">
             {product && product.name}
@@ -42,8 +40,8 @@ const ProductDetails: React.FC<IProductDetailsProps> = (props) => {
           <Text as="p" fontSize="xl" fontWeight={400} color="white">
             {product && product.description}
           </Text>
-        </Flex>
-      </Stack>
+        </GridItem>
+      </Grid>
     </motion.div>
   );
 };
