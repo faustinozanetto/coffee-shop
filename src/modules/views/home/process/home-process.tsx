@@ -1,5 +1,5 @@
 import React from 'react';
-import Section from '@modules/sections/components/section';
+import Section from '@modules/section/section';
 import ProcessFirstStep from './process-first-step';
 import ProcessSecondStep from './process-second-step';
 import ProcessThirdStep from './process-third-step';
@@ -11,7 +11,7 @@ const HomeProcess: React.FC<IHomeProcessProps> = (props) => {
   const {} = props;
 
   return (
-    <Section dividerColor="#151412" centerContent backgroundColor="#DAD8D3">
+    <Section backgroundColor="#DAD8D3">
       <div className="flex flex-col py-10 h-full w-full">
         {/* Title */}
         <div className="mb-6">

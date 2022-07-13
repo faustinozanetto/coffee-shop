@@ -19,6 +19,7 @@ const HomeView: React.FC<IHomeViewProps> = (props) => {
       <HomeProducts />
       <HomePlace />
       <HomeCustomers />
+      <HomeTeam />
     </div>
   );
 };

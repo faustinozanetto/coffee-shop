@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Text } from '@chakra-ui/react';
 import React from 'react';
 
 interface IFooterLinkProps {
@@ -11,7 +12,16 @@ const FooterLink: React.FC<IFooterLinkProps> = (props) => {
 
   return (
     <Link href={href} passHref>
-      <span className="mr-4 cursor-pointer hover:underline md:mr-6">{children}</span>
+      <Text
+        fontSize="md"
+        fontWeight={500}
+        color="white"
+        cursor="pointer"
+        textAlign="left"
+        _hover={{ color: 'orange.500' }}
+      >
+        {children}
+      </Text>
     </Link>
   );
 };

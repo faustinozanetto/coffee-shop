@@ -1,5 +1,6 @@
 import React from 'react';
-import Section from '@modules/sections/components/section';
+import Section from '@modules/section/section';
+import { Text, Box, Flex, VStack, Image, Button, Grid, GridItem } from '@chakra-ui/react';
 
 interface IHomeTeamProps {}
 
@@ -7,50 +8,70 @@ const HomeTeam: React.FC<IHomeTeamProps> = (props) => {
   const {} = props;
 
   return (
-    <Section dividerColor="#DAD8D3" backgroundColor="#151412">
-      <div className="flex flex-col py-10 items-center h-full w-full">
-        {/* Top */}
-        <h2 className="font-semibold text-5xl text-white text-center mb-6">Meet the amazing team</h2>
-        <div className="grid grid-cols-1 grid-rows-2 py-4 items-center h-full w-full md:grid-cols-2 md:grid-rows-1">
-          {/* Left Content */}
-          <div className="flex pr-8 mr-auto">
-            <div className="flex flex-col justify-center">
-              <div className="py-4">
-                <h2 className="font-semibold text-4xl text-white mb-2">The Team</h2>
-                <p className="font-normal text-md text-white text-left">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt blanditiis reiciendis culpa
-                  architecto doloribus nihil. Aut, est. Sint, temporibus inventore?
-                </p>
-              </div>
-              <div className="py-4">
-                <h2 className="font-semibold text-4xl text-white mb-2">The Team</h2>
-                <p className="font-normal text-md text-white text-left">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt blanditiis reiciendis culpa
-                  architecto doloribus nihil. Aut, est. Sint, temporibus inventore?
-                </p>
-              </div>
-              <div className="py-4">
-                <h2 className="font-semibold text-4xl text-white mb-2">The Team</h2>
-                <p className="font-normal text-md text-white text-left">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt blanditiis reiciendis culpa
-                  architecto doloribus nihil. Aut, est. Sint, temporibus inventore?
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Content */}
-          <div className="flex h-full w-full">
-            <div
-              className="bg-cover bg-center h-full w-full"
-              style={{
-                backgroundImage:
-                  'url(https://images.unsplash.com/photo-1515860734122-e0d771b36d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80)',
-              }}
+    <Section backgroundColor="white">
+      <Grid gridTemplateColumns="repeat(3, 1fr)" gridTemplateRows="250px 350px" gap={6}>
+        {/* Left Top */}
+        <GridItem rowSpan={1} colSpan={2}>
+          <Box height="full" width="full">
+            <Image
+              src="https://fitsmallbusiness.com/wp-content/uploads/2020/02/How-to-Start-a-Coffee-Shop-in-13-Steps-The-Ultimate-Guide.png"
+              objectFit="cover"
+              objectPosition="center"
+              width="100%"
+              height="100%"
             />
-          </div>
-        </div>
-      </div>
+          </Box>
+        </GridItem>
+
+        <GridItem>
+          <Box height="full" width="full">
+            <Image
+              src="https://cdn7.dissolve.com/p/D430_46_331/D430_46_331_1200.jpg"
+              objectFit="cover"
+              objectPosition="center"
+              width="100%"
+              height="100%"
+            />
+          </Box>
+        </GridItem>
+
+        {/* Midle Right Bottom */}
+        <GridItem rowSpan={1} colSpan={0}>
+          <Box width="full" height="full">
+            <Image
+              src="https://ak.picdn.net/shutterstock/videos/9703382/thumb/10.jpg"
+              objectFit="cover"
+              objectPosition="center"
+              width="100%"
+              height="100%"
+            />
+          </Box>
+        </GridItem>
+
+        {/* Right */}
+        <GridItem rowSpan={1} colSpan={2}>
+          <VStack spacing={4} alignItems="flex-start">
+            <Text as="span" fontSize="md" color="orange.500" fontWeight={600} letterSpacing="widest">
+              THE TEAM
+            </Text>
+            {/* Texts */}
+            <Text as="h1" fontSize="3em" fontWeight={700} color="black" lineHeight={1}>
+              Our Talented Team
+            </Text>
+            <Text as="p" fontSize="1.25em" fontWeight={400} color="black">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae adipisci modi similique, soluta vero
+              tempora cupiditate necessitatibus possimus exercitationem voluptatem magni delectus ducimus magnam, illo
+              nostrum voluptas perspiciatis eligendi cumque.
+            </Text>
+
+            <Box paddingTop={4} width="full">
+              <Button variant="ghost" size="lg">
+                Learn More
+              </Button>
+            </Box>
+          </VStack>
+        </GridItem>
+      </Grid>
     </Section>
   );
 };
