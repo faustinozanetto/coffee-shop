@@ -1,5 +1,5 @@
 import React from 'react';
-import { VStack } from '@chakra-ui/react';
+import { HStack } from '@chakra-ui/react';
 import { setSelectedProduct } from '@state/slices/product-selector.slice';
 import { useDispatch } from 'react-redux';
 import ProductSelectorItem from './product-selector-item';
@@ -18,11 +18,11 @@ const ProductSelector: React.FC<IProductSelectorProps> = (props) => {
   };
 
   return (
-    <VStack spacing={4} padding={4}>
+    <HStack spacing={4} padding={4}>
       {products.map((product, id) => (
         <ProductSelectorItem key={id} productId={product[0]} name={product[1]} onSelected={handleSelectedProduct} />
       ))}
-    </VStack>
+    </HStack>
   );
 };
 

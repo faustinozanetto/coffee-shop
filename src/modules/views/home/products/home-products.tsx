@@ -91,17 +91,16 @@ const HomeProducts: React.FC<IHomeProductsProps> = (props) => {
           <Text as="h2" fontSize="1.75em" fontWeight={400} color="white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </Text>
-        </VStack>
 
-        {/* Bottom */}
-        <HStack spacing={4}>
           {/* Product Selector */}
           <ProductSelector products={getShopProducts} />
-          {/* Product */}
-          <AnimatePresence>
-            <ProductDetails product={getSelectedProduct} />
-          </AnimatePresence>
-        </HStack>
+          <Box backgroundColor="orange.500" height="3px" width="100%" />
+        </VStack>
+
+        {/* Product */}
+        <AnimatePresence>
+          <ProductDetails product={getSelectedProduct} />
+        </AnimatePresence>
       </Flex>
     </Section>
   );

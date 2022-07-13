@@ -15,10 +15,10 @@ const FooterLink: React.FC<IFooterLinkProps> = (props) => {
       <Text
         fontSize="md"
         fontWeight={500}
-        color="white"
+        color="black"
         cursor="pointer"
         textAlign="left"
-        _hover={{ color: 'orange.500' }}
+        _hover={{ color: 'orange.600' }}
       >
         {children}
       </Text>

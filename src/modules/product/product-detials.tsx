@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Text, Image, Grid, GridItem } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import type { ProductDetailsType } from './product-details.types';
@@ -26,9 +26,11 @@ const ProductDetails: React.FC<IProductDetailsProps> = (props) => {
         hidden: { opacity: 0, translateY: 200 },
       }}
     >
-      <Grid gap={4} margin={4} padding={4} gridTemplateColumns="1fr 1fr" gridTemplateRows="1fr">
+      <Grid gap={4} margin={4} padding={4} gridTemplateColumns="1fr 1fr" gridTemplateRows="500px">
         {/* Left */}
-        <GridItem>{product && <Image src={product.thumbnail} alt={product.name} />}</GridItem>
+        <GridItem>
+          {product && <Image src={product.thumbnail} alt={product.name} width="100%" height="100%" objectFit="cover" />}
+        </GridItem>
 
         {/* Right */}
         <GridItem>

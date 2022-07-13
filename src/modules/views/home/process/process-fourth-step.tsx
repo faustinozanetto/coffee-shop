@@ -6,7 +6,7 @@ interface IProcessFourthStep {}
 const ProcessFourthStep: React.FC<IProcessFourthStep> = ({}) => {
   return (
     <Box
-      width="400px"
+      width="350px"
       backgroundColor="whiteAlpha.900"
       shadow="rgba(237, 137, 54, 0.25) 0px 8px 24px"
       margin={4}
