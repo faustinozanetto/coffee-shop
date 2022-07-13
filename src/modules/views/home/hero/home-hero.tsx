@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '@modules/section/section';
-import { Text, Box, Flex, VStack, HStack, Button, Image } from '@chakra-ui/react';
+import { Text, Box, Flex, VStack, HStack, Button, Image, Grid } from '@chakra-ui/react';
 
 interface IHomeHeroProps {}
 
@@ -9,9 +9,9 @@ const HomeHero: React.FC<IHomeHeroProps> = (props) => {
 
   return (
     <Section backgroundColor="black">
-      <Flex flexDir="row">
+      <Grid gap={6} gridTemplateColumns="1fr 1fr">
         {/* Left */}
-        <VStack width="50%" height="full" spacing={4} alignItems="flex-start">
+        <VStack height="full" spacing={4} alignItems="flex-start">
           {/* Texts */}
           <Text as="h1" fontSize="4.5em" fontWeight={700} color="white" lineHeight={1}>
             Exceptional historical dining experience
@@ -30,10 +30,10 @@ const HomeHero: React.FC<IHomeHeroProps> = (props) => {
         </VStack>
 
         {/* Right */}
-        <Box width="50%" height="full">
+        <Box height="full">
           <Image src="https://www.losdoscristianos.com/uploads/5/7/5/8/57580401/los-dos-website-vertical-coffee-cup1_orig.jpg" />
         </Box>
-      </Flex>
+      </Grid>
     </Section>
   );
 };

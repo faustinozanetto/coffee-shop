@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '@modules/section/section';
-import { Text, Box, Flex, VStack, Image, Button } from '@chakra-ui/react';
+import { Text, Box, Flex, VStack, Image, Button, Grid } from '@chakra-ui/react';
 
 interface IHomeAboutUsProps {}
 
@@ -9,14 +9,14 @@ const HomeAboutUs: React.FC<IHomeAboutUsProps> = (props) => {
 
   return (
     <Section backgroundColor="white">
-      <Flex flexDir="row">
+      <Grid gap={6} gridTemplateColumns="1fr 1fr">
         {/* Left */}
-        <Box width="50%" height="full" marginRight={10}>
+        <Box height="full">
           <Image src="https://i.pinimg.com/originals/27/2c/b4/272cb407fc2a28aa22a19b65b40bab24.jpg" />
         </Box>
 
         {/* Right */}
-        <VStack width="50%" height="full" spacing={4} alignItems="flex-start">
+        <VStack height="full" spacing={4} alignItems="flex-start">
           <Text as="span" fontSize="md" color="orange.500" fontWeight={600} letterSpacing="widest">
             ABOUT US
           </Text>
@@ -40,7 +40,7 @@ const HomeAboutUs: React.FC<IHomeAboutUsProps> = (props) => {
             </Button>
           </Box>
         </VStack>
-      </Flex>
+      </Grid>
     </Section>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import ShopLogo from '@modules/branding/components/shop-logo';
 import FooterLink from './footer-link';
+import { Box, Container, Text, Link, SimpleGrid, Stack, useColorModeValue } from '@chakra-ui/react';
 
 interface IFooterProps {}
 
@@ -8,37 +9,48 @@ const Footer: React.FC<IFooterProps> = (props) => {
   const {} = props;
 
   return (
-    <footer
-      className="p-4 shadow md:px-6 md:py-8"
-      style={{
-        backgroundColor: '#151412',
-      }}
-    >
-      <div className="sm:flex sm:items-center sm:justify-between">
-        <a href="https://flowbite.com" className="flex items-center mb-4 sm:mb-0">
-          <ShopLogo size="large" />
-        </a>
-        <ul className="flex flex-wrap items-center mb-4 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
-          <li>
-            <FooterLink href="/about">About</FooterLink>
-          </li>
-          <li>
-            <FooterLink href="/privacy">Privacy</FooterLink>
-          </li>
-          <li>
-            <FooterLink href="/contact">Contact</FooterLink>
-          </li>
-        </ul>
-      </div>
-      <hr className="my-4 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-6" />
-      <span className="block text-sm text-brand sm:text-center">
-        © 2022{' '}
-        <a href="https://conkisstudios.com" className="hover:underline">
-          Conkis Studios
-        </a>
-        . All Rights Reserved.
-      </span>
-    </footer>
+    <Box backgroundColor="black" color="white">
+      <Container as={Stack} maxW="6xl" py={10}>
+        <SimpleGrid templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 1fr 1fr' }} spacing={8}>
+          <Stack spacing={6}>
+            <Box>
+              <ShopLogo />
+            </Box>
+            <Text fontSize="sm">© 2022 Chakra Templates. All rights reserved</Text>
+          </Stack>
+          <Stack align="flex-start">
+            <Text fontWeight="500" fontSize="lg" mb={2}>
+              Product
+            </Text>
+            <Link href="#">Overview</Link>
+            <Link href="#">Features</Link>
+            <Link href="#">Tutorials</Link>
+            <Link href="#">Pricing</Link>
+            <Link href="#">Releases</Link>
+          </Stack>
+          <Stack align="flex-start">
+            <Text fontWeight="500" fontSize="lg" mb={2}>
+              Company
+            </Text>
+            <Link href="#">About</Link>
+            <Link href="#">Press</Link>
+            <Link href="#">Careers</Link>
+            <Link href="#">Contact</Link>
+            <Link href="#">Partners</Link>
+          </Stack>
+
+          {/* Location */}
+          <Stack align="flex-start">
+            <Text fontWeight="500" fontSize="lg" mb={2}>
+              Location
+            </Text>
+            <Text>Conforta 1245, CABA, Argentina</Text>
+            <Text>+54 11 4444 8888</Text>
+            <Text>info@conforta.com</Text>
+          </Stack>
+        </SimpleGrid>
+      </Container>
+    </Box>
   );
 };
 
