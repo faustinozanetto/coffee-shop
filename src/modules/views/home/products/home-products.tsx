@@ -68,9 +68,15 @@ const HomeProducts: React.FC<IHomeProductsProps> = (props) => {
   const {} = props;
   const selectedProductID = useSelector(selectProductSelectorState);
 
+  /* Returns the current selected product by the id in the redux state */
   const getSelectedProduct = useMemo(() => {
     return PRODUCTS.find((prod) => prod.id === selectedProductID);
   }, [selectedProductID]);
+
+  /* Returns an array of tuples, containing the id and the name. Used in product selector component. */
+  const getShopProducts: [number, string][] = useMemo(() => {
+    return PRODUCTS.map((product) => [product.id, product.name]);
+  }, []);
 
   return (
     <Section backgroundColor="black">
@@ -89,7 +95,7 @@ const HomeProducts: React.FC<IHomeProductsProps> = (props) => {
         {/* Bottom */}
         <HStack spacing={4}>
           {/* Product Selector */}
-          <ProductSelector products={PRODUCTS.map((product) => [product.id, product.name])} />
+          <ProductSelector products={getShopProducts} />
           {/* Product */}
           <ProductDetails product={getSelectedProduct} />
         </HStack>
