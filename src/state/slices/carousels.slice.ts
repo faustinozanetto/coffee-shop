@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { CarouselsState } from '@state/state.types';
+import type { CarouselsState } from '@state/state.types';
 import { RootState } from '@state/store';
 
 const initialState: CarouselsState = {

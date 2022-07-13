@@ -16,9 +16,11 @@
     "prettier": "prettier -l \"src/**/*.{js,jsx,md,ts,tsx}\""
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.2.3",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
     "@fontsource/poppins": "^4.5.8",
     "@reduxjs/toolkit": "^1.8.3",
-    "classnames": "^2.3.1",
     "framer-motion": "^6.4.3",
     "next": "^12.2.2",
     "react": "^18.2.0",
@@ -30,7 +32,6 @@
     "@types/node": "^18.0.3",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
-    "@types/tailwindcss": "^3.0.11",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "autoprefixer": "^10.4.7",
@@ -44,10 +45,8 @@
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-testing-library": "5.5.1",
-    "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "sass": "^1.53.0",
-    "tailwindcss": "^3.1.6",
     "typescript": "^4.7.4"
   }
 }

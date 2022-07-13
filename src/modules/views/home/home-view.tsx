@@ -14,11 +14,11 @@ const HomeView: React.FC<IHomeViewProps> = (props) => {
   return (
     <div className="flex flex-col">
       <HomeHero />
-      <HomeProducts />
+      {/* <HomeProducts />
       <HomeTeam />
       <HomeProcess />
       <HomeCustomers />
-      <HomePlace />
+      <HomePlace /> */}
     </div>
   );
 };
