@@ -1,11 +1,26 @@
 import React from 'react';
 import Section from '@modules/section/section';
-import { Text, Box, Flex, VStack, Image, Button, Grid, GridItem } from '@chakra-ui/react';
+import { Text, Box, VStack, Button, Grid, GridItem } from '@chakra-ui/react';
+import PlaceImagePresentation from '@modules/place/place-image-presentation';
+import { images } from '@lib/images';
 
 interface IHomePlaceProps {}
 
 const HomePlace: React.FC<IHomePlaceProps> = (props) => {
   const {} = props;
+
+  /* Gets a random amount of images and returns an array of random images */
+  const getRandomPictures = (): string[] => {
+    // Random amount between 4 and images size.
+    const randomAmount = Math.floor(Math.random() * (images.length - 4)) + 4;
+    const randomImages = [];
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < randomAmount; i++) {
+      randomImages.push(images[Math.floor(Math.random() * images.length)]);
+    }
+    console.log({ randomImages });
+    return randomImages;
+  };
 
   return (
     <Section backgroundColor="white">
@@ -36,41 +51,26 @@ const HomePlace: React.FC<IHomePlaceProps> = (props) => {
 
         {/* Midle Top */}
         <GridItem>
-          <Box height="full" width="full">
-            <Image
-              src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmVlJTIwc2hvcHxlbnwwfHwwfHw%3D&w=1000&q=80"
-              objectFit="cover"
-              objectPosition="center"
-              width="100%"
-              height="100%"
-            />
-          </Box>
+          <PlaceImagePresentation
+            id="presentation-1"
+            presentation={{ images: getRandomPictures(), delay: 10000, loop: true }}
+          />
         </GridItem>
 
         {/* Right Top */}
         <GridItem>
-          <Box height="full" width="full">
-            <Image
-              src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/f5843852864027.591f18d2ba0f8.jpg"
-              objectFit="cover"
-              objectPosition="center"
-              width="100%"
-              height="100%"
-            />
-          </Box>
+          <PlaceImagePresentation
+            id="presentation-2"
+            presentation={{ images: getRandomPictures(), delay: 12500, loop: true }}
+          />
         </GridItem>
 
         {/* Midle Right Bottom */}
         <GridItem rowSpan={1} colSpan={2}>
-          <Box width="full" height="full">
-            <Image
-              src="https://i.pinimg.com/originals/27/2c/b4/272cb407fc2a28aa22a19b65b40bab24.jpg"
-              objectFit="cover"
-              objectPosition="center"
-              width="100%"
-              height="100%"
-            />
-          </Box>
+          <PlaceImagePresentation
+            id="presentation-3"
+            presentation={{ images: getRandomPictures(), delay: 15000, loop: true }}
+          />
         </GridItem>
       </Grid>
     </Section>
