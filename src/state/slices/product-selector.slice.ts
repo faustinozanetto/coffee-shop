@@ -1,6 +1,7 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import type { ProductSelectorState } from '@state/state.types';
-import { RootState } from '@state/store';
+import type { RootState } from '@state/store';
 
 const initialState: ProductSelectorState = {
   id: 1,
