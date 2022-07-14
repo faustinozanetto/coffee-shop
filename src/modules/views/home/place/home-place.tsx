@@ -18,7 +18,6 @@ const HomePlace: React.FC<IHomePlaceProps> = (props) => {
     for (let i = 0; i < randomAmount; i++) {
       randomImages.push(images[Math.floor(Math.random() * images.length)]);
     }
-    console.log({ randomImages });
     return randomImages;
   };
 
