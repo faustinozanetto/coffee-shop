@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { CarouselsState } from '@state/state.types';
-import { RootState } from '@state/store';
+import type { RootState } from '@state/store';
 
 const initialState: CarouselsState = {
   data: [],

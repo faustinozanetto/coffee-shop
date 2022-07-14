@@ -14,12 +14,14 @@ const CoffeeSgop: React.FC<ICoffeeShop> = (props) => {
   const { Component, pageProps } = props;
 
   return (
-    <ChakraProvider theme={theme}>
-      <Provider store={store}>
-        <GlobalStyles />
-        <Component {...pageProps} />
-      </Provider>
-    </ChakraProvider>
+    <React.StrictMode>
+      <ChakraProvider theme={theme}>
+        <Provider store={store}>
+          <GlobalStyles />
+          <Component {...pageProps} />
+        </Provider>
+      </ChakraProvider>
+    </React.StrictMode>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '@modules/section/section';
-import { Text, Box, Flex, VStack, HStack, Button, Image, Grid } from '@chakra-ui/react';
+import { Text, Box, VStack, HStack, Button, Image, Grid } from '@chakra-ui/react';
 
 interface IHomeHeroProps {}
 
@@ -14,10 +14,10 @@ const HomeHero: React.FC<IHomeHeroProps> = (props) => {
         <VStack height="full" spacing={4} alignItems="flex-start">
           {/* Texts */}
           <Text as="h1" fontSize="4.5em" fontWeight={700} color="white" lineHeight={1}>
-            Exceptional historical dining experience
+            Experience the true taste of Coffee.
           </Text>
           <Text as="h2" fontSize="2em" fontWeight={400} color="white">
-            Boost your productiviy and build your mood with a short break in the most confortable place
+            Our homebrew coffee is made with the best ingredients and the best brewing process in the city.
           </Text>
 
           {/* Buttons */}

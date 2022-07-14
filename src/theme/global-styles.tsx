@@ -1,5 +1,4 @@
 import { Global } from '@emotion/react';
-import { fontConfigurations, injectFontFamily } from '@modules/fonts/fonts';
 
 const GlobalStyles = () => {
   return (
@@ -13,6 +12,7 @@ const GlobalStyles = () => {
       html {
         text-rendering: optimizeLegibility;
         font-feature-settings: "kern";
+        scroll-behavior: smooth;
       }
     `}
     />

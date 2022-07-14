@@ -12,18 +12,19 @@ const ProductDetails: React.FC<IProductDetailsProps> = (props) => {
 
   return (
     <motion.div
+      key={product.id}
       initial="hidden"
       exit="hidden"
       animate="visible"
       whileInView="visible"
       transition={{
         type: 'spring',
-        bounce: 0.25,
-        duration: 1,
+        bounce: 0.35,
+        duration: 1.25,
       }}
       variants={{
         visible: { opacity: 1, translateY: 0 },
-        hidden: { opacity: 0, translateY: 200 },
+        hidden: { opacity: 0, translateY: 30 },
       }}
     >
       <Grid gap={4} margin={4} padding={4} gridTemplateColumns="1fr 1fr" gridTemplateRows="500px">

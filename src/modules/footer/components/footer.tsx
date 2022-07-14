@@ -9,7 +9,7 @@ const Footer: React.FC<IFooterProps> = (props) => {
   const {} = props;
 
   return (
-    <Box backgroundColor="white" color="black" padding={6}>
+    <Box backgroundColor="black" color="white" padding={6}>
       <Container as={Stack} maxW="6xl" paddingTop={10}>
         <SimpleGrid templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 1fr 1fr' }} spacing={8}>
           <Stack spacing={6}>

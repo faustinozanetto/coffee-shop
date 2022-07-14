@@ -29,7 +29,7 @@ const Section: React.FC<SectionProps> = (props) => {
         height="100%"
         width="100%"
       >
-        <Box paddingX={{ base: 4, md: 8 }} paddingY="10rem">
+        <Box paddingX={{ base: 4, md: 8 }} paddingY="8rem">
           <Container maxWidth="8xl">{children}</Container>
         </Box>
       </Box>

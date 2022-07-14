@@ -7,6 +7,7 @@ import HomePlace from './place/home-place';
 import HomeProcess from './process/home-process';
 import HomeProducts from './products/home-products';
 import HomeTeam from './team/home-team';
+import HomeCTA from './home-cta/home-cta';
 
 interface IHomeViewProps {}
 
@@ -22,6 +23,7 @@ const HomeView: React.FC<IHomeViewProps> = (props) => {
       <HomeCustomers />
       <HomeTeam />
       <HomeProcess />
+      <HomeCTA />
     </Box>
   );
 };

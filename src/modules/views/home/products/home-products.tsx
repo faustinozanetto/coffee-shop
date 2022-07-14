@@ -61,7 +61,8 @@ const PRODUCTS: ProductDetailsType[] = [
     thumbnail:
       'https://images.unsplash.com/photo-1577590835286-1cdd24c08fd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
     name: 'Latte',
-    description: '',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, ullam. Optio illo voluptate perspiciatis rer mollitia autem, odit assumenda ipsam minima aliquid fuga, corporis adipisci.',
   },
 ];
 
@@ -89,7 +90,7 @@ const HomeProducts: React.FC<IHomeProductsProps> = (props) => {
             Our Products
           </Text>
           <Text as="h2" fontSize="1.75em" fontWeight={400} color="white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            We have a wide range of products to choose from.
           </Text>
 
           {/* Product Selector */}
