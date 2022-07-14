@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Text, Image, Grid, GridItem } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import type { ProductDetailsType } from './product-details.types';
