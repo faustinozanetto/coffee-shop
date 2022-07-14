@@ -15,6 +15,7 @@ const HomeTeam: React.FC<IHomeTeamProps> = (props) => {
           <Box height="full" width="full">
             <Image
               src="https://fitsmallbusiness.com/wp-content/uploads/2020/02/How-to-Start-a-Coffee-Shop-in-13-Steps-The-Ultimate-Guide.png"
+              alt="Team Image"
               objectFit="cover"
               objectPosition="center"
               width="100%"
@@ -27,6 +28,7 @@ const HomeTeam: React.FC<IHomeTeamProps> = (props) => {
           <Box height="full" width="full">
             <Image
               src="https://cdn7.dissolve.com/p/D430_46_331/D430_46_331_1200.jpg"
+              alt="Team Image"
               objectFit="cover"
               objectPosition="center"
               width="100%"
@@ -40,6 +42,7 @@ const HomeTeam: React.FC<IHomeTeamProps> = (props) => {
           <Box width="full" height="full">
             <Image
               src="https://ak.picdn.net/shutterstock/videos/9703382/thumb/10.jpg"
+              alt="Team Image"
               objectFit="cover"
               objectPosition="center"
               width="100%"

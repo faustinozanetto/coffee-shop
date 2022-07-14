@@ -36,7 +36,7 @@ const HomeCTA: React.FC<IHomeCTAProps> = (props) => {
               objectPosition="center"
               width="100%"
               height="100%"
-              alt="Photo"
+              alt="CTAImage"
             />
           </Box>
         </GridItem>

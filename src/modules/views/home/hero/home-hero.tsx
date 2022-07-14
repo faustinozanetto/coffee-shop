@@ -31,7 +31,10 @@ const HomeHero: React.FC<IHomeHeroProps> = (props) => {
 
         {/* Right */}
         <Box height="full">
-          <Image src="https://www.losdoscristianos.com/uploads/5/7/5/8/57580401/los-dos-website-vertical-coffee-cup1_orig.jpg" />
+          <Image
+            src="https://www.losdoscristianos.com/uploads/5/7/5/8/57580401/los-dos-website-vertical-coffee-cup1_orig.jpg"
+            alt="Hero Image"
+          />
         </Box>
       </Grid>
     </Section>

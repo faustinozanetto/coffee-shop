@@ -33,7 +33,15 @@ const PlaceImagePresentation: React.FC<IPlaceImagePresentationProps> = (props) =
           height: '100%',
         }}
       >
-        <Image ref={imageRef} src={currentImage} objectFit="cover" objectPosition="center" width="100%" height="100%" />
+        <Image
+          ref={imageRef}
+          src={currentImage}
+          alt="PresentationImage"
+          objectFit="cover"
+          objectPosition="center"
+          width="100%"
+          height="100%"
+        />
       </motion.div>
     </Box>
   );

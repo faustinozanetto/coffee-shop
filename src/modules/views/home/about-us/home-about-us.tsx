@@ -12,7 +12,10 @@ const HomeAboutUs: React.FC<IHomeAboutUsProps> = (props) => {
       <Grid gap={6} gridTemplateColumns="1fr 1fr">
         {/* Left */}
         <Box height="full">
-          <Image src="https://i.pinimg.com/originals/27/2c/b4/272cb407fc2a28aa22a19b65b40bab24.jpg" />
+          <Image
+            src="https://i.pinimg.com/originals/27/2c/b4/272cb407fc2a28aa22a19b65b40bab24.jpg"
+            alt="AboutUsImage"
+          />
         </Box>
 
         {/* Right */}
