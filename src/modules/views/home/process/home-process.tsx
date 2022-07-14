@@ -9,18 +9,18 @@ const HomeProcess: React.FC<IHomeProcessProps> = (props) => {
   const {} = props;
 
   return (
-    <Section backgroundColor="black">
-      <VStack>
+    <Section backgroundColor="white">
+      <VStack spacing={6}>
         {/* Top */}
         <VStack spacing={4} alignItems="flex-start">
           <Text as="span" fontSize="md" color="orange.500" fontWeight={600} letterSpacing="widest">
             THE PROCESS
           </Text>
           {/* Texts */}
-          <Text as="h1" fontSize="3em" fontWeight={700} color="white" lineHeight={1}>
+          <Text as="h1" fontSize="3em" fontWeight={700} color="black" lineHeight={1}>
             Our Refined Method
           </Text>
-          <Text as="p" fontSize="1.25em" fontWeight={400} color="white">
+          <Text as="p" fontSize="1.25em" fontWeight={400} color="black">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque optio fuga ipsa culpa nesciunt maxime
             quibusdam consequatur. Rem eaque adipisci ullam magni impedit animi nam esse amet veritatis perspiciatis
             repellat facere, doloremque, qui doloribus reiciendis debitis beatae itaque. Temporibus commodi nesciunt

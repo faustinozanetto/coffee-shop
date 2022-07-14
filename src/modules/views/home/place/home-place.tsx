@@ -32,7 +32,7 @@ const HomePlace: React.FC<IHomePlaceProps> = (props) => {
             </Text>
             {/* Texts */}
             <Text as="h1" fontSize="3em" fontWeight={700} color="black" lineHeight={1}>
-              Comforta's Corner
+              Klangs Corner
             </Text>
             <Text as="p" fontSize="1.25em" fontWeight={400} color="black">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae adipisci modi similique, soluta vero

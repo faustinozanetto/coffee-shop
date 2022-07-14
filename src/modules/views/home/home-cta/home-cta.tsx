@@ -8,7 +8,7 @@ const HomeCTA: React.FC<IHomeCTAProps> = (props) => {
   const {} = props;
 
   return (
-    <Section backgroundColor="white">
+    <Section backgroundColor="black">
       <Grid gridTemplateColumns="repeat(2, 1fr)" gridTemplateRows="250px" gap={6}>
         {/* Left */}
         <GridItem>
@@ -17,10 +17,10 @@ const HomeCTA: React.FC<IHomeCTAProps> = (props) => {
               COME VISIT
             </Text>
             {/* Texts */}
-            <Text as="h1" fontSize="3em" fontWeight={700} color="black" lineHeight={1}>
+            <Text as="h1" fontSize="3em" fontWeight={700} color="white" lineHeight={1}>
               What are you waiting for?
             </Text>
-            <Text as="p" fontSize="1.25em" fontWeight={400} color="black">
+            <Text as="p" fontSize="1.25em" fontWeight={400} color="white">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae adipisci modi similique, soluta vero
               tempora.
             </Text>

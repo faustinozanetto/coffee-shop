@@ -28,7 +28,12 @@ const ProcessCard: React.FC<IProcessCardProps> = (props) => {
         hidden: { opacity: 0, scale: 0 },
       }}
     >
-      <Flex flexDir="row" backgroundColor="white" shadow="rgba(237, 137, 54, 0.25) 0px 8px 24px" overflow="hidden">
+      <Flex
+        flexDir="row"
+        backgroundColor="blackAlpha.900"
+        shadow="rgba(237, 137, 54, 0.25) 0px 8px 24px"
+        overflow="hidden"
+      >
         {/* Image */}
         <Flex
           flexDir="column"
@@ -45,8 +50,8 @@ const ProcessCard: React.FC<IProcessCardProps> = (props) => {
               fontWeight={900}
               lineHeight="1"
               padding={2}
-              backgroundColor="black"
-              color="white"
+              backgroundColor="white"
+              color="black"
             >
               {step}
             </Text>
@@ -55,7 +60,7 @@ const ProcessCard: React.FC<IProcessCardProps> = (props) => {
 
         {/* Description */}
         <Flex marginLeft="auto" padding={4} flex={1}>
-          <Text as="p" fontSize="lg" fontWeight={400} color="black">
+          <Text as="p" fontSize="lg" fontWeight={400} color="white">
             {description}
           </Text>
         </Flex>

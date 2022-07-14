@@ -8,20 +8,7 @@ interface ILayoutHead {
 }
 
 const LayoutHead: React.FC<ILayoutHead> = (props) => {
-  const {
-    seo = {
-      title: 'Home | Coffee Shop',
-      description: 'Coffee Shop',
-      url: 'https://coffeeshop.com',
-      canonicalUrl: 'https://coffeeshop.com',
-      imageUrl: 'https://coffeeshop.com/static/images/logo.png',
-      imageAlt: 'Coffee Shop Logo',
-      imageDimensions: {
-        width: 200,
-        height: 200,
-      },
-    },
-  } = props;
+  const { seo } = props;
   return (
     <Head>
       {/* Title */}

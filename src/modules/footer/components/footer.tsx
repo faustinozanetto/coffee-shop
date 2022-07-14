@@ -9,14 +9,14 @@ const Footer: React.FC<IFooterProps> = (props) => {
   const {} = props;
 
   return (
-    <Box backgroundColor="black" color="white" padding={6}>
+    <Box backgroundColor="white" color="black" padding={6}>
       <Container as={Stack} maxW="6xl" paddingTop={10}>
         <SimpleGrid templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 1fr 1fr' }} spacing={8}>
           <Stack spacing={6}>
             <Box>
               <ShopLogo />
             </Box>
-            <Text fontSize="sm">© 2022 Chakra Templates. All rights reserved</Text>
+            <Text fontSize="sm">© 2022 Conkis Studios All rights reserved</Text>
           </Stack>
           <Stack align="flex-start">
             <Text fontWeight="600" fontSize="lg" mb={2}>

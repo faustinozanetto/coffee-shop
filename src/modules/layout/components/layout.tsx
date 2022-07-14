@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from '@modules/navbar/components/navbar';
+import { Flex } from '@chakra-ui/react';
 import Footer from '../../footer/components/footer';
 import LayoutHead from './layout-head';
-import { Flex } from '@chakra-ui/react';
 
 interface ILayout {
   children: React.ReactNode;
@@ -14,7 +14,7 @@ const Layout: React.FC<ILayout> = (props) => {
   return (
     <Flex flexDir="column">
       {/* Head */}
-      <LayoutHead {...Object.assign(headData.seo)} />
+      <LayoutHead seo={headData.seo} />
 
       {/* Navbar */}
       <Navbar />
