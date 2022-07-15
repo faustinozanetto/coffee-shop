@@ -27,9 +27,6 @@ const useImagePresentation = (presentation: IUserPresentationProps) => {
     }
   };
 
-  // Timer handle
-  const timer = setInterval(switchImage, delay);
-
   // Update image source on current change.
   useEffect(() => {
     if (imageRef.current) {
@@ -40,6 +37,9 @@ const useImagePresentation = (presentation: IUserPresentationProps) => {
 
   // Clear timer
   useEffect(() => {
+    // Timer handle
+    const timer = setInterval(switchImage, delay);
+
     return () => {
       clearInterval(timer);
     };

@@ -35,9 +35,7 @@ const HomePlace: React.FC<IHomePlaceProps> = (props) => {
               Klangs Corner
             </Text>
             <Text as="p" fontSize="1.25em" fontWeight={400} color="black">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae adipisci modi similique, soluta vero
-              tempora cupiditate necessitatibus possimus exercitationem voluptatem magni delectus ducimus magnam, illo
-              nostrum voluptas perspiciatis eligendi cumque.
+              Located in one of the prettiest roads of Palermo Soho, Klangs Coffe is a must
             </Text>
 
             <Box paddingTop={4} width="full">

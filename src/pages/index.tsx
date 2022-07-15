@@ -14,13 +14,13 @@ const HomePage: React.FC<IHomePage> = (props) => {
           title: 'Home | Klangs Coffee',
           description:
             "Klang's Coffee Shop is a coffee shop located in Kuala Lumpur, Malaysia. We are a coffee shop that specializes in coffee, tea, and pastries.",
-          url: 'https://www.klangs.com/',
-          canonicalUrl: 'https://www.klangs.com/',
-          imageUrl: '/assets/images/image.png',
+          url: 'https://www.klangscoffee.com/',
+          canonicalUrl: 'https://www.klangscoffee.com/',
+          imageUrl: '/assets/images/logo.png',
           imageAlt: "Klang's Coffee Shop Logo",
           imageDimensions: {
-            width: 600,
-            height: 200,
+            width: 1000,
+            height: 1000,
           },
         },
       }}

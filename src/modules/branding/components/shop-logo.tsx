@@ -6,7 +6,7 @@ interface IShopLogoProps {}
 const ShopLogo: React.FC<IShopLogoProps> = (props) => {
   const {} = props;
   return (
-    <Text as="span" fontWeight={700} fontSize={30} color="orange.400">
+    <Text as="span" fontWeight={800} fontSize={30} color="orange.400">
       Klangs Coffee
     </Text>
   );

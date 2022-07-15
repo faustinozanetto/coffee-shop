@@ -17,9 +17,7 @@ const BuyCard: React.FC<IBuyCardProps> = (props) => {
       whileHover="hover"
       viewport={{ once: true }}
       transition={{
-        type: 'spring',
-        bounce: 0.35,
-        duration: 0.5,
+        duration: 0.3,
       }}
       variants={{
         visible: { opacity: 1, scale: 1 },
