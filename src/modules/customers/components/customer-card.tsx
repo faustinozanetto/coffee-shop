@@ -2,7 +2,9 @@ import React from 'react';
 import { Text, Flex, Box } from '@chakra-ui/react';
 
 interface ICustomCardProps {
+  /* Customer's name */
   name: string;
+  /* Customer's comment */
   comment: string;
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from '@modules/section/section';
-import { Box, Button, Text, Image, Flex, Grid, GridItem, VStack } from '@chakra-ui/react';
-import ProcessCard from '@modules/process/process-card';
+import Section from '@modules/section/components/section';
+import { Box, Button, Text, Grid, VStack } from '@chakra-ui/react';
+import ProcessCard from '@modules/process/components/process-card';
 
 interface IHomeProcessProps {}
 

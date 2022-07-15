@@ -1,7 +1,8 @@
 import React from 'react';
 import { Box, Container, VStack } from '@chakra-ui/react';
 
-interface SectionProps {
+interface ISectionProps {
+  /* Children */
   children: React.ReactNode;
   /** Wether the background is an image or not. */
   backgroundIsImage?: boolean;
@@ -11,7 +12,7 @@ interface SectionProps {
   backgroundColor?: string;
 }
 
-const Section: React.FC<SectionProps> = (props) => {
+const Section: React.FC<ISectionProps> = (props) => {
   const {
     backgroundColor = 'white',
     backgroundIsImage = false,

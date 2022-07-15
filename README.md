@@ -10,7 +10,7 @@ This project is a sample of a Coffee Shop Bussiness, it covers different section
 
 - [TechStack](#👨🏻‍💻-tech-stack)
 - [Features](#🌌-features)
-- [Installation](#installation)
+- [Installation](#🛠️-installation)
 
 ---
 
@@ -20,6 +20,15 @@ Coffee Shop is being developed with the next set of tools and technologies:
 
 - NextJS - The React Framework for Production.
 - Typescript - JavaScript with syntax for types.
-- TailwindCSS - A utility-first CSS framework
+- Chakra UI - A ReactJS UI Component Library.
 
 ---
+
+## 🛠️ Installation
+
+```sh
+git clone https://github.com/faustinozanetto/coffee-shop # Clone the repo in the folder of choice.
+cd coffee-shop # Cd into the cloned repo.
+yarn install # Install the deps with yarn or npm.
+yarn start:dev # Start the project.!.
+```

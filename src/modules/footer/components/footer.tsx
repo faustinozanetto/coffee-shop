@@ -1,6 +1,6 @@
 import React from 'react';
 import ShopLogo from '@modules/branding/components/shop-logo';
-import { Box, Container, Text, SimpleGrid, Stack, Link, LinkBox } from '@chakra-ui/react';
+import { Box, Container, Text, SimpleGrid, Stack, Link } from '@chakra-ui/react';
 import FooterLink from './footer-link';
 
 interface IFooterProps {}

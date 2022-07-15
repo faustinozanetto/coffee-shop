@@ -3,7 +3,9 @@ import NextLink from 'next/link';
 import { Text } from '@chakra-ui/react';
 
 interface INavbarLinkProps {
+  /* Href of the link */
   href: string;
+  /* Label of the link */
   label: string;
 }
 

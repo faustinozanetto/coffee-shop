@@ -1,6 +1,6 @@
 import React from 'react';
-import Section from '@modules/section/section';
-import { Text, Box, Flex, VStack, Image, Button, Grid } from '@chakra-ui/react';
+import Section from '@modules/section/components/section';
+import { Text, Box, VStack, Image, Button, Grid } from '@chakra-ui/react';
 
 interface IHomeAboutUsProps {}
 

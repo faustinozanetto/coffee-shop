@@ -1,8 +1,8 @@
 import React from 'react';
-import Section from '@modules/section/section';
+import Section from '@modules/section/components/section';
 import { Text, Box, VStack, Button, Grid, GridItem } from '@chakra-ui/react';
-import PlaceImagePresentation from '@modules/place/place-image-presentation';
-import { images } from '@lib/images';
+import PlaceImagePresentation from '@modules/place/components/place-image-presentation';
+import { images } from '@lib/contants';
 
 interface IHomePlaceProps {}
 

@@ -3,8 +3,11 @@ import { Box, Flex, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 interface IProcessCardProps {
+  /* Step number */
   step: number;
+  /* Step description */
   description: string;
+  /* Step image */
   thumbnail: string;
 }
 

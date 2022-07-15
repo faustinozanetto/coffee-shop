@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import ProductSelectorItem from './product-selector-item';
 
 interface IProductSelectorProps {
+  /* Array of tuples containing the product id and the product name */
   products: [number, string][];
 }
 

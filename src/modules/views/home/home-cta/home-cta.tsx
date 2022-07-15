@@ -1,5 +1,5 @@
-import { Box, Button, Text, Image, Grid, VStack, GridItem } from '@chakra-ui/react';
-import Section from '@modules/section/section';
+import { Box, Text, Image, Grid, VStack, GridItem } from '@chakra-ui/react';
+import Section from '@modules/section/components/section';
 import React from 'react';
 
 interface IHomeCTAProps {}

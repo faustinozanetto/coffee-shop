@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import React from 'react';
-import type { ISeoData } from '../layout.types';
+import type { ISeoData } from '../types/layout.types';
 
-interface ILayoutHead {
+interface ILayoutHeadProps {
   /** SEO Data to fill up on every page. */
   seo: ISeoData;
 }
 
-const LayoutHead: React.FC<ILayoutHead> = (props) => {
+const LayoutHead: React.FC<ILayoutHeadProps> = (props) => {
   const { seo } = props;
   return (
     <Head>

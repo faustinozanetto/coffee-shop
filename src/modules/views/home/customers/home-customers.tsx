@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from '@modules/section/section';
-import { Text, Box, Flex, VStack, Image, Button, Grid, GridItem, Divider } from '@chakra-ui/react';
-import CustomerCard from '@modules/customers/customer-card';
+import Section from '@modules/section/components/section';
+import { Text, Box, Flex, VStack } from '@chakra-ui/react';
+import CustomerCard from '@modules/customers/components/customer-card';
 
 interface IHomeCustomersProps {}
 

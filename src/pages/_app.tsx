@@ -1,4 +1,3 @@
-// import '@fontsource/poppins';
 import '@fontsource/montserrat';
 import React from 'react';
 import type { AppProps } from 'next/app';

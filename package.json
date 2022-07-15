@@ -13,14 +13,14 @@
     "start:prod": "next start",
     "build:dev": "next build",
     "eslint": "next lint --fix --dir src",
-    "prettier": "prettier -l \"src/**/*.{js,jsx,md,ts,tsx}\""
+    "prettier": "prettier -l \"src/**/*.{js,jsx,md,ts,tsx}\"",
+    "lint": "yarn prettier && yarn eslint"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.2.3",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@fontsource/montserrat": "^4.5.11",
-    "@fontsource/poppins": "^4.5.8",
     "@reduxjs/toolkit": "^1.8.3",
     "framer-motion": "^6.4.3",
     "next": "^12.2.2",
@@ -47,7 +47,6 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-testing-library": "5.5.1",
     "prettier": "^2.7.1",
-    "sass": "^1.53.0",
     "typescript": "^4.7.4"
   }
 }

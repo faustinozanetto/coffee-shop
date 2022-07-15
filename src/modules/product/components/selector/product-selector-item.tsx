@@ -3,8 +3,11 @@ import { motion } from 'framer-motion';
 import React from 'react';
 
 interface IProductSelectorItemProps {
+  /* Product ID */
   productId: number;
+  /* Product name */
   name: string;
+  /* Callback when the product is selected */
   onSelected: (id: number) => void;
 }
 

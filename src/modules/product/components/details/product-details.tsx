@@ -1,9 +1,10 @@
 import React from 'react';
 import { Text, Image, Grid, GridItem } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import type { ProductDetailsType } from './product-details.types';
+import type { ProductDetailsType } from '../../types/product-details.types';
 
 export interface IProductDetailsProps {
+  /* Product Data */
   product: ProductDetailsType;
 }
 

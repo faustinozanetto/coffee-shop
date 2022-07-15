@@ -1,9 +1,10 @@
 import { Flex, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import React from 'react';
-import type { ProductBuyType } from './buy-card.types';
+import type { ProductBuyType } from '../types/buy-card.types';
 
 interface IBuyCardProps {
+  /* Product Data */
   productData: ProductBuyType;
 }
 
